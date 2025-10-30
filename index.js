@@ -44,7 +44,7 @@ app.get(
 );
 
 // Not found page
-app.use(readFileMiddleware("pages", "error.html"), async (req, res) => {
+app.use(readFileMiddleware("pages", "not-found.html"), async (req, res) => {
   const data = res.locals.fileContent;
   res.set({ "content-type": "text/html" });
   res.status(200).send(data);
